@@ -11,12 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install deps
+      - name: Install dependencies
         run: npm ci
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - name: Install playwright browsers
+        run: npx playwright install-deps chromium
       - name: e2e tests
         run: npm run e2e
       - name: unit tests
