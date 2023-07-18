@@ -2,7 +2,7 @@ name: Check commit name
 on: [pull_request, push]
 
 jobs:
-  commitlint:
+  check-commit-name:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
